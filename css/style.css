@@ -2641,7 +2641,7 @@ video.bgvid {
 .service img {
   display: inline-block;
   margin: auto;
-  opacity: 0.45;
+  opacity: 0.95;
 }
 
 .service h6 {
@@ -2758,7 +2758,7 @@ video.bgvid {
   font-size: 14px;
   line-height: 26px;
   text-align: left;
-  color: #acafba;
+  color: #909090;
   margin-top: 44px;
 }
 
