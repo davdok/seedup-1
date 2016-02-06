@@ -63,8 +63,8 @@
 }
 .team h5{
 	margin-top: -3px;
-	font-size:13px;
-	color:#a9a9a9;
+	font-size:14px;
+	color:#696969;
 	font-family: 'Roboto', 'sans-serif';
 	font-weight: 300;
 }
@@ -2543,7 +2543,7 @@ video.bgvid {
 
 .bg-serv {
   position: relative;
-  background: url("../img/agency/coffee.jpg") no-repeat center center;
+  background: url("../img/agency/specialties_back2.jpg") no-repeat center center;
   overflow: hidden;
   background-size: cover;
   padding: 0;
@@ -2647,9 +2647,9 @@ video.bgvid {
 .service h6 {
   text-transform: uppercase;
   font-family: 'Jaapokki';
-  color: #acafba;
-  margin-top: 33px;
-  font-size: 13px;
+  color: #696969;
+  margin-top: 32px;
+  font-size: 14px;
 }
 
 .active-item h6 {
@@ -2770,7 +2770,7 @@ video.bgvid {
   margin-top: 5px;
 }
 
-.process-info {
+.active {
   display: none;
 }
 
@@ -3026,16 +3026,16 @@ video.bgvid {
 }
 
 .member2 img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 
 }
 
 .member2 img:hover {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
 }
 
 .team-member:hover .member {
