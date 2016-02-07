@@ -78,38 +78,43 @@ $(function() {
 
 
     //OUR SERVICES
-    $('.service').click(function(){
+    (function() {
+    var selectedTab = 0;
+
+    $('.service').on('mouseover', function(){
         var $t = $(this);
-        if(tabFinish || $t.hasClass('active')) return false;
-        tabFinish = 1;
         $t.closest('.serv').find('.service').removeClass('active-item');
         $t.addClass('active-item');
         var index = $t.parent().find('.service').index(this);
-        $t.closest('.serv').find('.serv-description:visible').fadeOut(500, function(){
-            $t.closest('.serv').find('.serv-description').eq(index).fadeIn(500,
-                function() {
-                    tabFinish = 0;
-
-                });
+        if (selectedTab == index)
+          return;
+        selectedTab = index;
+        $t.closest('.serv').queue("fx", function(next) {
+          $(this).find('.serv-description:visible').fadeOut(500, next);
+        }).queue("fx", function(next) {
+          $(this).find('.serv-description').eq(index).fadeIn(500, next);
         });
     });
+    })();
 
+    (function() {
+    var selectedTab = 0;
 
-    $('.process').on('click',  function(){
+    $('.process').on('mouseover',  function(){
         var $t = $(this);
-        if(tabFinish || $t.hasClass('active')) return false;
-        tabFinish = 1;
         $t.closest('.work-process').find('.process').removeClass('active-process');
-        $t.addClass('active-process');
         var index = $t.parent().parent().find('.process').index(this);
-        $t.closest('.work-process').find('.process-info:visible').fadeOut(500, function(){
-            $t.closest('.work-process').find('.process-info').eq(index).fadeIn(500, function() {
-                tabFinish = 0;
-
-            });
+        if (index == selectedTab)
+          return;
+        selectedTab = index;
+        $t.addClass('active-process');
+        $t.closest('.work-process').queue("fx", function(next) {
+          $(this).find('.process-info:visible').fadeOut(500, next);
+        }).queue("fx", function(next) {
+          $(this).find('.process-info').eq(index).fadeIn(500, next);
         });
     });
-
+    })();
 
 
     function initSwiper(){
