@@ -39,11 +39,6 @@
   margin: 0;
   position: relative;
   list-style: none;
-  -webkit-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
-  -ms-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
-  -o-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
   background-color: transparent;
   background-size: cover;
   background-attachment: fixed;
@@ -55,7 +50,7 @@
   display: block;
 }
 .fh5co-project-style-2 .fh5co-projects ul li a .fh5co-overlay {
-  background: #d3d3d3;
+  background: #FFFFFF;
 
   position: absolute;
   top: 0;
