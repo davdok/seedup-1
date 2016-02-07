@@ -90,9 +90,15 @@ $(function() {
           return;
         selectedTab = index;
         $t.closest('.serv').queue("fx", function(next) {
-          $(this).find('.serv-description:visible').fadeOut(500, next);
+          if ($(this).find('.serv-description:visible').length > 0)
+            $(this).find('.serv-description:visible').fadeOut(500, next);
+          else
+            next();
         }).queue("fx", function(next) {
-          $(this).find('.serv-description').eq(index).fadeIn(500, next);
+          if (selectedTab == index)
+            $(this).find('.serv-description').eq(index).fadeIn(500, next);
+          else
+            next();
         });
     });
     })();
@@ -109,9 +115,15 @@ $(function() {
         selectedTab = index;
         $t.addClass('active-process');
         $t.closest('.work-process').queue("fx", function(next) {
-          $(this).find('.process-info:visible').fadeOut(500, next);
+          if ($(this).find('.process-info:visible').length > 0)
+            $(this).find('.process-info:visible').fadeOut(500, next);
+          else
+            next();
         }).queue("fx", function(next) {
-          $(this).find('.process-info').eq(index).fadeIn(500, next);
+          if (selectedTab == index)
+            $(this).find('.process-info').eq(index).fadeIn(500, next);
+          else
+            next();
         });
     });
     })();
