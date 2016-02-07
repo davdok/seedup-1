@@ -3033,10 +3033,10 @@ video.bgvid {
 
 }
 
-.member2 img:hover {
+/*.member2 img:hover {
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
-}
+}*/
 
 .team-member:hover .member {
   top: 80px;
