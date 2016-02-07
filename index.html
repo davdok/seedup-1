@@ -159,7 +159,7 @@
                   </div>
                   <br>
                   <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
-                    <a href="joinus.html" class="col-md-2 col-md-offset-1 col-sm-6 col-xs-6 btn btn-primary btn-block">Interested in joining us ?</a>
+                    <a href="joinus.html" class=" btn btn-primary btn-block">Interested in joining us ?</a>
                     <!--<a class="read-more col-md-6 col-md-offset-2 col-sm-12 col-xs-12" href="joinus.html">Interested in joining us ? <i class="arrow-green"></i></a>!--->
                   </div>
                 </section>
@@ -234,7 +234,7 @@
                 </div>
                 <br>
                 <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
-                  <a href="projects.html" class="col-md-2 col-md-offset-1 col-sm-6 col-xs-6 btn btn-primary btn-block">Browse our work</a>
+                  <a href="projects.html" class=" btn btn-primary btn-block">Browse our work</a>
                   <!--<a class="read-more col-md-6 col-md-offset-2 col-sm-12 col-xs-12" href="joinus.html">Interested in joining us ? <i class="arrow-green"></i></a>!--->
                 </div>
       <!--SECTIONS TEAM-->
@@ -368,6 +368,21 @@
                               </div>
                             </a>
                           </li>
+						                      <li class="wow fadeInUp"  style="background-image: url(img/agency/full_2.jpg);"data-wow-duration="1s" data-wow-delay="2s" data-stellar-background-ratio="0.5">
+                          <a target="_blank" href="http://hackateam.com/en/challenge/connected">
+                            <div class="fh5co-overlay"></div>
+                            <div class="container">
+                              <div class="fh5co-text">
+                                <div class="fh5co-text-inner">
+                                  <div class="row">
+                                    <div class="col-md-6"><h3><i class="icon-star"></i> 2nd prize for the Connected Challenge</h3></div>
+                                    <div class="col-md-6"><p>Date: March 2015 | Organisme: StackOverflow Careers </p></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
                           <li class="wow fadeInUp"  style="background-image: url(img/agency/full_3.jpg);"data-wow-duration="1s" data-wow-delay="1.7s" data-stellar-background-ratio="0.5">
                             <a target="_blank" href="http://shop-against-the-clock.bemyapp.com/">
                               <div class="fh5co-overlay"></div>
@@ -383,25 +398,58 @@
                               </div>
                             </a>
                         </li>
-                        <li class="wow fadeInUp"  style="background-image: url(img/agency/full_2.jpg);"data-wow-duration="1s" data-wow-delay="2s" data-stellar-background-ratio="0.5">
-                          <a target="_blank" href="http://hackateam.com/en/challenge/connected">
-                            <div class="fh5co-overlay"></div>
-                            <div class="container">
-                              <div class="fh5co-text">
-                                <div class="fh5co-text-inner">
-                                  <div class="row">
-                                    <div class="col-md-6"><h3><i class="icon-star"></i> 2nd prize for the Connected Challenge</h3></div>
-                                    <div class="col-md-6"><p>Date: March 2015 | Organisme: StackOverflow Careers </p></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
+  
                       </ul>
                     </div>
                   </div>
                 </section>
+	         <h2 class="block-title a-block-title">
+                    </h2>   
+	       <h2 class="block-title a-block-title">Gallery
+                    </h2>
+	      <div class="container">
+    <div class="col-md-12">
+      
+
+        <div class="well">
+            <div id="myCarousel" class="carousel slide">
+                
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+           
+               
+                </div>
+                <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            </div>
+            <!--/myCarousel-->
+        </div>
+        <!--/well-->
+    </div>
+</div>
+	                <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+                <br>
+
+					 <a href="https://www.instagram.com/seedup.io/" class=" btn btn-primary btn-block">See more</a>
+									</div>
+
+
+   
 
   <!-- ADD MAIL TO -->
       <!--CONTACT -->
@@ -472,7 +520,36 @@
                       </div>
                     </div>
                   </footer>
-                  <script src="js/jquery-1.11.2.min.js"></script>
+	              <script src="js/jquery-1.11.2.min.js"></script>
+				  <script src="js/bootstrap.min.js"></script>
+
+
+				  <script type="text/javascript" src="js/instafeed.js"></script>
+				 <script type="text/javascript">
+				 $(document).ready(function() {
+	$('#myCarousel').carousel({
+	interval: 10000
+	})
+    
+    $('#myCarousel').on('slid.bs.carousel', function() {
+    	//alert("slid");
+	});
+    
+    
+});
+
+
+					var feed = new Instafeed({
+						get: 'user',
+						userId: 2910690595,
+						accessToken: '2910690595.d79690b.fa15888830db447fbafc222a6758a41f',
+					    resolution: 'standard_resolution',
+						template: '<a class="work-img design" href="{{link}}"><img src="{{image}}" /></a>'
+							});
+					 feed.run();
+
+
+				 </script>
                   <script src="js/idangerous.swiper.min.js"></script>
                   <script src="js/isotope.pkgd.min.js"></script>
                   <script src="js/magnific.js"></script>
