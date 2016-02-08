@@ -403,51 +403,33 @@
                     </div>
                   </div>
                 </section>
-	         <h2 class="block-title a-block-title">
-                    </h2>   
-	       <h2 class="block-title a-block-title">Gallery
-                    </h2>
-	      <div class="container">
-    <div class="col-md-12">
-      
 
-        <div class="well">
-            <div id="myCarousel" class="carousel slide">
-                
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <div class="row">
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-                            </div>
-                        </div>
-                        <!--/row-->
-                    </div>
-                    <!--/item-->
-           
-               
-                </div>
-                <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+	   
+	
+	<br>
+	<br>
+	
+  <div class="container">
+    <h2 class="block-title a-block-title">Gallery
+    </h2>
+    <div class="row">
+      <div class="swiper-container" data-mode="horizontal" data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="4" data-lg-slides="4" data-loop="0">
+        <div class="swiper-wrapper" id="instafeed">
+         
+		
 
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-            </div>
-            <!--/myCarousel-->
+          <div class="pagination swiper-pagination">
+          </div>
         </div>
-        <!--/well-->
+      </div>
+      <div class="arrows a-arrow">
+        <div class="arrow-left"><img src="img/agency/arrow-l.png" alt="arrow"></div>
+        <div class="arrow-right"><img src="img/agency/arrow.png" alt="arrow"></div>
+      </div>
     </div>
-</div>
-	                <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
-                <br>
-
-					 <a href="https://www.instagram.com/seedup.io/" class=" btn btn-primary btn-block">See more</a>
-									</div>
-
+  </div>
+	
+	
 
    
 
@@ -526,25 +508,14 @@
 
 				  <script type="text/javascript" src="js/instafeed.js"></script>
 				 <script type="text/javascript">
-				 $(document).ready(function() {
-	$('#myCarousel').carousel({
-	interval: 10000
-	})
-    
-    $('#myCarousel').on('slid.bs.carousel', function() {
-    	//alert("slid");
-	});
-    
-    
-});
-
+		
 
 					var feed = new Instafeed({
 						get: 'user',
 						userId: 2910690595,
 						accessToken: '2910690595.d79690b.fa15888830db447fbafc222a6758a41f',
 					    resolution: 'standard_resolution',
-						template: '<a class="work-img design" href="{{link}}"><img src="{{image}}" /></a>'
+						template: '	<div class="swiper-slide"><div class="col-md-12 col-sm-12 col-xs-12"><div class="team-member"><a href="{{link}}"><img class="memberINST" src={{image}} alt="team" /></a></div></div></div>'
 							});
 					 feed.run();
 
