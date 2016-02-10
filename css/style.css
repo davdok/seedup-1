@@ -2899,6 +2899,15 @@ video.bgvid {
   position: relative;
   overflow: hidden;
 }
+
+.work-img--width2 {
+  width: 50%;
+}
+
+.work-img--height2 {
+  height: 50%;
+}
+
 @media screen and (max-width: 479px) {
   .work-img {
     width: 100%;

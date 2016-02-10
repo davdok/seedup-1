@@ -15,10 +15,13 @@ $(function() {
         var $container = $('.isotope');
         $container.isotope({
             itemSelector: '.work-img',
-            masonry: '.work-img'
+            percentPosition: true,
+            masonry: {
+              columnWidth: '.work-sizer'
+            }
         });
         filterHeight();
-        window.scrollTo(0, 0);
+        //window.scrollTo(0, 0);
 
         if(window.location.hash) {
             var index = $('.scroll-to-link[href="'+window.location.hash+'"]').index('.scroll-to-link');
