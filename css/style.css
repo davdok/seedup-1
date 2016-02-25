@@ -2904,10 +2904,6 @@ video.bgvid {
   width: 50%;
 }
 
-.work-img--height2 {
-  height: 50%;
-}
-
 @media screen and (max-width: 479px) {
   .work-img {
     width: 100%;
