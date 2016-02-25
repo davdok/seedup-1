@@ -1,7 +1,13 @@
-[
-  {
-    "location": "/",
-    "type": "static",
-    "path": "."
-  }
-]
+{
+  "aliases": [
+    "www.seed-up.io",
+    "seed-up.io"
+  ],
+  "locations": [
+    {
+      "location": "/",
+      "type": "static",
+      "path": "."
+    }
+  ]
+}
