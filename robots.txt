@@ -1,0 +1,4 @@
+User-agent: Googlebot
+Disallow: README.md
+Disallow: deploy.json
+Sitemap: http://www.seed-up.io/sitemap.xml
