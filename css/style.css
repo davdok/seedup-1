@@ -33,10 +33,6 @@
 /* 02 - LOADER */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 .img-responsive{
- transition-duration: 0.5s;
-}
-
-.img-responsive{
  opacity:0.45;
  transition-duration: 0.5s;
 }
@@ -84,7 +80,6 @@
 	margin-top: 2px;
 	padding-left:0px;
 	display: inline-block;
-	margin:0 auto;
 }
 .team ul li{
 	padding:0 10px;
