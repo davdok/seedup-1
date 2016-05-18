@@ -2447,7 +2447,7 @@ video.bgvid {
 }
 .lates-work {
     background: #f4f4f6;
-    padding-bottom: 67px;
+    <!--padding-bottom: 67px;-->
     width: 100%;
     padding-top: 96px;
 }
