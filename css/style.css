@@ -3479,6 +3479,17 @@ video.bgvid {
     padding-bottom: 20px;
 }
 
+.article-content {
+    
+
+    border:double 3px #04c8d6;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+
+
+}
+
 
 
 
