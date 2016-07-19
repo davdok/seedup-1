@@ -3491,5 +3491,22 @@ video.bgvid {
 }
 
 
+.content-doc {
+    height: 800px;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 1000px;
+}
 
+.img-doc {
+    height: 1200px;
+    display: inline-block;
+    width: 99%;
+}
+
+.img-recrut {
+    max-height: 100%;
+    max-width: 100%;
+}
 
