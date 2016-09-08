@@ -502,11 +502,16 @@ $(function() {
             $('.a-header').addClass("a-header-active");
             $('.r-header').addClass("r-header-active");
             $('.m-header ').addClass("m-header-bg");
+			$('.ag-nav').addClass("ag-nav-active");
+			$('.ag-nav-active').removeClass("ag-nav");
 
         } else {
             $('.b-header').removeClass("b-header-active");
             $('.a-header').removeClass("a-header-active");
-            $('.m-header ').removeClass("m-header-bg");
+            $('.m-header ').removeClass("m-header-bg");$
+			$('.ag-nav-active').addClass("ag-nav");
+			$('.ag-nav').removeClass("ag-nav-active");
+
         }
     });
 

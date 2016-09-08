@@ -1658,8 +1658,8 @@ screen and (max-height: 300px) {
     position: fixed;
     width: 100%;
     z-index: 9999;
-    background: #fff;
     padding-top: 30px;
+    color:white;
     transition: background .3s linear
 }
 .header>.container {
@@ -2006,37 +2006,86 @@ img.footer-logo {
     background: #fff!important;
     border-bottom: 1px solid #ccc
 }
-.ag-nav li a {
+
+
+
+.ag-nav-active li a {
     color: #333
 }
-.ag-nav li a:hover {
+.ag-nav-activeli a:hover {
     color: #35373e;
     border-color: #35373e
 }
 @media screen and (max-width: 992px) {
-    .ag-nav li a {
+    .ag-nav-active li a {
         border-top: 1px solid #acafba
     }
-    .ag-nav li a:hover {
+    .ag-nav-active li a:hover {
         background: #35373e;
         color: #fff
     }
 }
-.ag-nav li.active a {
+.ag-nav-active li.active a {
     color: #35373e;
     border-color: #35373e
 }
 @media screen and (max-width: 992px) {
-    .ag-nav li.active a a {
+    .ag-nav-active li.active a a {
         background: #35373e;
         color: #fff!important;
         border-color: #acafba
     }
 }
 @media screen and (max-width: 992px) and (max-width: 992px) {
-    .ag-nav li.active a {
+    .ag-nav-active li.active a {
         background: #35373e;
         color: #fff
+    }
+}
+@media screen and (max-width: 481px) {
+    .ag-nav-active li {
+        text-align: left!important
+    }
+    .ag-nav-active li a {
+        padding-left: 15px
+    }
+}
+
+
+
+
+
+.ag-nav li a {
+    color: white
+}
+.ag-nav li a:hover {
+    color: white;
+    border-color: white
+}
+@media screen and (max-width: 992px) {
+    .ag-nav li a {
+        border-top: 1px solid white
+    }
+    .ag-nav li a:hover {
+        background: #35373e;
+        color: white
+    }
+}
+.ag-nav li.active a {
+    color: white;
+    border-color: white
+}
+@media screen and (max-width: 992px) {
+    .ag-nav li.active a a {
+        background: white;
+        color: #fff!important;
+        border-color: white
+    }
+}
+@media screen and (max-width: 992px) and (max-width: 992px) {
+    .ag-nav li.active a {
+        background: white;
+        color: white
     }
 }
 @media screen and (max-width: 481px) {
@@ -2047,6 +2096,9 @@ img.footer-logo {
         padding-left: 15px
     }
 }
+
+
+
 .a-menu-button span {
     background: #35373e
 }
@@ -3509,4 +3561,3 @@ video.bgvid {
     max-height: 100%;
     max-width: 100%;
 }
-
