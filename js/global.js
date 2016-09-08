@@ -622,16 +622,19 @@ $(function() {
 
 
     // Inline popups
-    if($('#gallery-popap').length) {
-        $('#gallery-popap').magnificPopup({
+    if($('#gallery-popap1').length) {
+        $('#gallery-popap1').magnificPopup({
             delegate: 'a',
-            removalDelay: 500, //delay removal by X to allow out-animation
-            callbacks: {
-                beforeOpen: function() {
-                    this.st.mainClass = this.st.el.attr('data-effect');
-                }
-            },
-            midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+			type: 'inline',
+			modal: false,
+        });
+    }
+
+	if($('#gallery-popap2').length) {
+        $('#gallery-popap2').magnificPopup({
+            delegate: 'a',
+			type: 'inline',
+			modal: false,
         });
     }
 
@@ -640,7 +643,6 @@ $(function() {
         $('.gallery-parent').magnificPopup({
             delegate: 'a', // child items selector, by clicking on it popup will open
             type: 'image',
-            gallery: {enabled: true},
             removalDelay: 500, //delay removal by X to allow out-animation
             callbacks: {
                 beforeOpen: function () {
