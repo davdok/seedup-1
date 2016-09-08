@@ -2064,28 +2064,38 @@ img.footer-logo {
 }
 @media screen and (max-width: 992px) {
     .ag-nav li a {
-        border-top: 1px solid white
+        color: #333;
+        border-top: 1px solid #acafba
     }
     .ag-nav li a:hover {
         background: #35373e;
-        color: white
+        color: #fff
     }
 }
 .ag-nav li.active a {
     color: white;
     border-color: white
 }
+
+@media screen and (min-width: 992px) {
+    .visitButton{
+        width:50%;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .ag-nav li.active a a {
-        background: white;
+        background: #35373e;
         color: #fff!important;
-        border-color: white
+        border-color: #acafba
     }
 }
 @media screen and (max-width: 992px) and (max-width: 992px) {
     .ag-nav li.active a {
-        background: white;
-        color: white
+        background: #35373e;
+        color: #fff
     }
 }
 @media screen and (max-width: 481px) {
