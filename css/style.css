@@ -2053,7 +2053,11 @@ img.footer-logo {
 
 
 
+.cardProject{
+    padding-left: 0;
+    padding-right:0;
 
+}
 
 .ag-nav li a {
     color: white
