@@ -3881,6 +3881,7 @@ video.bgvid {
     /* top: auto; */
     /* bottom: 0px; */
     /* margin-right: -19px; */
+    padding-top: 15px;
 }
 #quote-carousel .carousel-indicators li {
     width: 50px;
