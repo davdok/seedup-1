@@ -131,105 +131,23 @@ $(function() {
     });
     })();
 
+    var swiper = new Swiper('.swiper-container', {
 
-    function initSwiper(){
-        var initIterator = 0;
-        $('.swiper-container').each(function(){
-            var $t = $(this);
+       slidesPerView: 3,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination'
+    });
+    
 
-            var index = 'unique-id-'+initIterator;
-            var slideMode = $(this).attr('data-mode');
-            $t.attr('data-init', index).addClass('initialized');
-            $t.find('.pagination').addClass('pagination-'+index);
-
-            var loopVar = parseInt($t.attr('data-loop')),
-                slidesPerViewVar = $t.attr('data-slides-per-view'),
-                xsValue, smValue, mdValue, lgValue;
-            var centeredSlidesVar = ($t.closest('.history, .testimonials-container').length)?1:0;
-            if(slidesPerViewVar == 'responsive'){
-                slidesPerViewVar = 1;
-                xsValue = $t.attr('data-xs-slides');
-                smValue = $t.attr('data-sm-slides');
-                mdValue = $t.attr('data-md-slides');
-                lgValue = $t.attr('data-lg-slides');
-            }
-
-            swipers[index] = new Swiper(this,{
-                pagination: '.pagination-'+index,
-                loop: loopVar,
-                paginationClickable: true,
-                calculateHeight: true,
-                slidesPerView: slidesPerViewVar,
-                roundLengths: true,
-                mode:slideMode,
-                centeredSlides: centeredSlidesVar,
-                onInit: function(swiper){
-                    if($t.attr('data-slides-per-view')=='responsive') updateSlidesPerView(xsValue, smValue, mdValue, lgValue, swiper);
-                },
-                onSlideChangeEnd:function(swiper){
-
-                    var activeIndex = (loopVar===true)?swiper.activeIndex:swiper.activeLoopIndex;
-                    if($t.next().find('.slider-index').length) {
-                        $t.next().find(".start_index").html(activeIndex+1);
-                    }
-                    if($t.find('.slider-index').length) {
-                        $t.find(".start_index").html(activeIndex+1);
-                    }
-                    if($t.hasClass('swiper-project')) {
-                        var activeSlide = $t.find('.swiper-slide-active'),
-                            activePrev =  activeSlide.prev().data('name'),
-                            activeNext =  activeSlide.next().data('name');
-
-                        $('.v-project-prev span').text(activePrev);
-                        $('.v-project-next span').text(activeNext);
-
-                        if(!activeSlide.next().hasClass('swiper-slide')) {
-                            $('.v-project-next').fadeOut();
-                        }
-                        else{
-                            $('.v-project-next').fadeIn();
-                        }
-
-                        if(!activeSlide.prev().hasClass('swiper-slide')) {
-                            $('.v-project-prev').fadeOut();
-                        }
-                        else{
-                            $('.v-project-prev').fadeIn();
-                        }
-                    }
-                    if($t.hasClass('testimonials-slider')) {
-                        $('.testimonials-item').parent().find('.testimonials-item').css('display', 'none').removeClass('active');
-                        $('.testimonials-item').eq(activeIndex).css({
-                            'display' : 'block',
-                            'opacity' : 0
-                        }).animate({'opacity' : 1},50,
-                        function() {
-                            $(this).addClass('active');
-                        }
-                        );
-                    }
-
-                },
-                onSlideChangeStart: function(swiper){
-
-                    if($t.closest('.w-banner').length){
-                        $('.banner-navigation').removeClass('active-nav');
-                        $('.banner-navigation').eq(activeIndex).addClass('active-nav');
-                    }
-                }
-            });
-            swipers[index].reInit();
-            if($t.find('.default-active').length) swipers[index].swipeTo($t.find('.swiper-slide').index($t.find('.default-active')), 0);
-            initIterator++;
-        });
-    };
+   
 
     //SWIPER ARROWS
-    $('.arrow-left').on('click', function(){
+    $('.arrow-left2').on('click', function(){
         swipers[$(this).parent().prev().attr('data-init')].swipePrev();
     });
 
-    $('.arrow-right').on('click', function(){
+    $('.arrow-right2').on('click', function(){
         swipers[$(this).parent().prev().attr('data-init')].swipeNext();
     });
 
@@ -285,7 +203,7 @@ $(function() {
     }, false);
 
 
-    initSwiper();
+    
 
     //SLIDE IN TAB CLICK
     $('.member-slide').on('click', function () {
@@ -497,11 +415,13 @@ $(function() {
 
     //HEADER FIXED ON SCROLL
     $(window).on('scroll', function () {
-        if ($(this).scrollTop() > 10) {
+        if ($(this).scrollTop() > 570) {
             $('.b-header').addClass("b-header-active");
             $('.a-header').addClass("a-header-active");
             $('.r-header').addClass("r-header-active");
             $('.m-header ').addClass("m-header-bg");
+            $('.visitButton').addClass("visitButton-active");
+            
 			$('.ag-nav').addClass("ag-nav-active");
 			$('.ag-nav-active').removeClass("ag-nav");
 
@@ -511,6 +431,8 @@ $(function() {
             $('.m-header ').removeClass("m-header-bg");$
 			$('.ag-nav-active').addClass("ag-nav");
 			$('.ag-nav').removeClass("ag-nav-active");
+
+             $('.visitButton').removeClass("visitButton-active");
 
         }
     });
@@ -623,18 +545,80 @@ $(function() {
 
     // Inline popups
     if($('#gallery-popap1').length) {
+
+
         $('#gallery-popap1').magnificPopup({
             delegate: 'a',
 			type: 'inline',
 			modal: false,
+            closeOnContentClick:true,
+             tPrev: 'Previous (Left arrow key)', // Alt text on left arrow
+    tNext: 'Next (Right arrow key)',
+    gallery: {
+  enabled: true, // set to true to enable gallery
+
+  preload: [0,2], // read about this option in next Lazy-loading section
+
+  navigateByImgClick: true,
+
+  arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+  tPrev: 'Previous (Left arrow key)', // title for left button
+  tNext: 'Next (Right arrow key)', // title for right button
+  tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+}
+
         });
     }
 
 	if($('#gallery-popap2').length) {
         $('#gallery-popap2').magnificPopup({
             delegate: 'a',
-			type: 'inline',
-			modal: false,
+            type: 'inline',
+            modal: false,
+            closeOnContentClick:true,
+             tPrev: 'Previous (Left arrow key)', // Alt text on left arrow
+    tNext: 'Next (Right arrow key)',
+    gallery: {
+  enabled: true, // set to true to enable gallery
+
+  preload: [0,2], // read about this option in next Lazy-loading section
+
+  navigateByImgClick: true,
+
+  arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+  tPrev: 'Previous (Left arrow key)', // title for left button
+  tNext: 'Next (Right arrow key)', // title for right button
+  tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+}
+
+        });
+    }
+
+
+    if($('#gallery-popap3').length) {
+        $('#gallery-popap3').magnificPopup({
+            delegate: 'a',
+            type: 'inline',
+            modal: false,
+            closeOnContentClick:true,
+             tPrev: 'Previous (Left arrow key)', // Alt text on left arrow
+    tNext: 'Next (Right arrow key)',
+    gallery: {
+  enabled: true, // set to true to enable gallery
+
+  preload: [0,2], // read about this option in next Lazy-loading section
+
+  navigateByImgClick: true,
+
+  arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+  tPrev: 'Previous (Left arrow key)', // title for left button
+  tNext: 'Next (Right arrow key)', // title for right button
+  tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+}
+
         });
     }
 

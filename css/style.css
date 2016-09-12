@@ -1175,10 +1175,11 @@ img.mfp-img {
 }
 .mfp-arrow-left .mfp-a,
 .mfp-arrow-left:after {
-    width: 30px;
-    height: 30px;
-    background: url(../img/agency/l-arrow.png) center no-repeat rgba(0, 0, 0, .8);
-    left: 15px
+    width: 47px;
+    height: 54px;
+    background: url(../img/agency/arrow-l.png) center no-repeat rgba(0, 0, 0, .8);
+    left: 15px;
+    background-size: 29px 9px;
 }
 .mfp-arrow-right {
     right: 0
@@ -1188,10 +1189,13 @@ img.mfp-img {
 }
 .mfp-arrow-right .mfp-a,
 .mfp-arrow-right:after {
-    width: 30px;
-    height: 30px;
+    /* width: 30px; */
+    /* height: 30px; */
     background: url(../img/agency/v-arrow.png) center no-repeat rgba(0, 0, 0, .8);
-    right: 15px
+    right: 15px;
+    width: 47px;
+    height: 54px;
+    background-size: 29px 9px;
 }
 .mfp-iframe-holder {
     padding-top: 40px;
@@ -1657,10 +1661,10 @@ screen and (max-height: 300px) {
 .header {
     position: fixed;
     width: 100%;
-    z-index: 9999;
+    z-index: 5;
     padding-top: 30px;
     color:white;
-    transition: background .3s linear
+    transition: background .3s linear;
 }
 .header>.container {
     position: relative
@@ -1677,7 +1681,7 @@ screen and (max-height: 300px) {
 .nav {
     float: right;
     margin-top: 5px;
-    margin-right: 15px
+    margin-right: 15px;
 }
 @media screen and (max-width: 992px) {
     .nav {
@@ -1701,13 +1705,13 @@ screen and (max-height: 300px) {
     }
 }
 .nav li a {
-    color: #196575;
+    color: #333;
     font-size: 13px;
     text-transform: uppercase;
     padding: 5px 2px;
     border: 2px solid transparent;
     transition: border-color .2s linear;
-    display: inline-block
+    display: inline-block;
 }
 @media screen and (max-width: 1200px) {
     .nav li {
@@ -1733,7 +1737,11 @@ screen and (max-height: 300px) {
 }
 .nav li a:hover,
 .nav li.active a {
-    border-color: #196575
+     transition-timing-function: ease-in;
+
+  /* Quick on the way out */
+  transition: 0.2s;
+
 }
 .nav li:last-of-type {
     margin-right: 0
@@ -2008,13 +2016,24 @@ img.footer-logo {
 }
 
 
+.visitButton-active {
+    margin-top: -9px;
+    width: 43.5% !important;
+}
 
 .ag-nav-active li a {
     color: #333
 }
-.ag-nav-activeli a:hover {
+.ag-nav-active li a {
     color: #35373e;
-    border-color: #35373e
+    /* border-color: #35373e */
+}
+
+.ag-nav-active li a:hover {
+    color: #fff;
+    border-color: #35373e;
+
+    background-color:#333;
 }
 @media screen and (max-width: 992px) {
     .ag-nav-active li a {
@@ -2061,10 +2080,9 @@ img.footer-logo {
 }
 
 .cardProject img{
-    width: 100%;
     max-width:100%;
     max-height:100%;
-    opacity: 0.3;
+    opacity: 0.5;
     filter: alpha(opacity=40);
 }
 .cardProject:hover img{
@@ -2080,12 +2098,11 @@ img.footer-logo {
     text-align:center;
 }
 .cardProject:hover h1 {
-    top:70px;
+   
 }
 .cardProject h2{
     padding: 10px;
-    display: none;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     width:100%;
     position: absolute;
     top:100px;color:white;
@@ -2095,12 +2112,16 @@ img.footer-logo {
     display: block;
 }
 
-.ag-nav li a {
-    color: white
-}
 .ag-nav li a:hover {
     color: white;
-    border-color: white
+    background:#fff;
+    color:#333;
+    
+}
+.ag-nav li a {
+    color: white;
+    /* border-color: #fff; */
+    padding: 11px;
 }
 @media screen and (max-width: 992px) {
     .ag-nav li a {
@@ -2126,7 +2147,7 @@ a.anchor {
 
 @media screen and (min-width: 992px) {
     .visitButton{
-        width:42.5%;
+        width: 41%;
         margin-left: 0 auto;
         margin-right: 0 auto;
     }
@@ -2196,6 +2217,8 @@ a.anchor {
     overflow: hidden
 }
 @media screen and (max-width: 992px) {
+
+
     .banner_description {
         margin: 0 auto;
         -webkit-transform: translate(0);
@@ -2533,11 +2556,11 @@ video.bgvid {
 }
 .read {
     font-family: 'Maven Pro';
-    font-size: 14px;
+    font-size: 16px;
     line-height: 26px;
     text-align: left;
     color: #909090;
-    margin-top: 44px
+    margin-top: 44px;
 }
 .use {
     font-size: 18px;
@@ -2880,10 +2903,16 @@ video.bgvid {
     top: 0
 }
 .a-arrow .arrow-left {
-    left: -600px
+    /* right: 741px; */
+    position: absolute;
+    top: -260px;
+    width: 101px;
 }
 .a-arrow .arrow-right {
-    right: 600px
+    /* right: 600px */
+    position: absolute;
+    top: -260px;
+    width: 101px;
 }
 .a-skills {
     width: 100%;
@@ -3624,4 +3653,287 @@ video.bgvid {
 .img-recrut {
     max-height: 100%;
     max-width: 100%;
+}
+
+    .process_info
+    {
+        margin-top: 10px;
+    }
+    .button_hacker_house{
+      margin-top: -18px;
+        margin-left: -10px;
+        font-size: 20px !important;
+        font-family: 'Baloo Chettan', cursive;
+    }
+
+    .play_hacker_house
+    {
+
+    display: block;
+            width: 41px;
+    margin-right: 10px;
+    }
+
+
+    .play_hacker_house2
+    {
+
+
+          width: 41px;
+    margin-right: 55px;
+    }
+    .red_hh
+    {
+    color: #ec604c;
+    font-family: 'Nothing You Could Do', cursive;
+
+    }
+
+
+     .seed_up_cool{
+
+    display: inline;
+
+    position: relative;
+
+    font-size: 70px ;
+    font-family: "Source Sans Pro",Arial,sans-serif;
+
+    letter-spacing: -5px;
+
+
+    }
+
+    .separator
+    {
+    border-top: 4px solid #ec604c;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    opacity: 0.7
+
+    }
+
+
+    .sla_hh
+    {
+
+    color: #ec604c !important;
+
+    }
+
+    .up_hh
+    {
+
+    color: #fadd00 !important;
+
+    }
+
+    .seed_hh
+    {
+
+    color: #567cbe !important;
+
+    }
+
+    .seed_up_cool:after {
+
+    content: "SEED / UP";
+    position: absolute;
+    left: -4px;
+    top: -16px;
+    color: #333;
+    }
+
+    .text_hh
+    {
+
+    width: 50px;
+    }
+
+
+    @keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+
+    .s_hh
+    {
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+    margin-left: -34px;
+    width: 50px;
+    }
+
+    .p_seed
+    {
+    margin-top: 50px;
+    }
+
+    .al_hh
+    {
+
+    display: inline-block;
+    position: absolute;
+    left: 0;
+
+    }
+
+    .ar_hh
+    {
+
+    display: inline-block;
+    position: absolute;
+    right: 0;
+
+    }
+      .swiper-container{
+        width: 100%;
+        height: 300px;
+        margin: 20px auto;
+    }
+
+    .more_hh
+    {font-size: 25px;/* text-align: center; */margin-right: -10px;margin-top: 71px;float: center;/* align-items: center; */}
+    .more2_hh
+    {
+    border: 1px solid #333;
+    color: #333 !important;
+    }
+    a.more2_hh:hover
+    {
+
+    color: #ec604c !important;
+    }
+
+    .classWithPad { margin:10px; padding:10px; }
+
+    .fleches
+    {
+    width: 123px;
+    position: absolute;
+    /* left: 20px; */
+    margin-left: -68px;
+    margin-top: -58px;
+
+    }
+
+    .sw-container2 {
+
+      display: inline-block;
+    max-width: 680px;
+    width: 49%;
+    margin-left: 62px;
+
+  }
+
+  .fh5co-project-style-2 .fh5co-projects ul li a .fh5co-text {
+    display: table;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.title_hh
+{
+    font-size: 25px;
+}
+
+.m_hh_more
+{
+    width: 20px;
+    /* position: absolute; */
+    margin-top: -5px;
+
+}
+
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+    /* Control buttons  */
+    /* Previous button  */
+    /* Next button  */
+    /* Changes the position of the indicators */
+    /* Changes the color of the indicators */
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control.left {
+    left: -37px;
+}
+#quote-carousel .carousel-control.right {
+    right: -44px;
+}
+#quote-carousel .carousel-indicators {
+    /* right: 50%; */
+    /* top: auto; */
+    /* bottom: 0px; */
+    /* margin-right: -19px; */
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+    background: #333333;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    border-color: #333;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 239px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+.dhh
+{
+width: 100%;
+height: 400px;
+overflow: scroll;
+
+
+
+}
+
+
+.dhh::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+
+
+.dhh::-webkit-scrollbar-thumb {
+  background-color: #333;
+  outline: 1px solid #333;
 }
