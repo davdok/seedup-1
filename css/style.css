@@ -1710,7 +1710,7 @@ screen and (max-height: 300px) {
     text-transform: uppercase;
     padding: 5px 2px;
     border: 2px solid transparent;
-    transition: border-color .2s linear;
+    transition: all .2s linear;
     display: inline-block;
 }
 @media screen and (max-width: 1200px) {
@@ -3881,6 +3881,7 @@ video.bgvid {
     /* top: auto; */
     /* bottom: 0px; */
     /* margin-right: -19px; */
+    padding-top: 15px;
 }
 #quote-carousel .carousel-indicators li {
     width: 50px;
