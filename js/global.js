@@ -441,7 +441,7 @@ $(function() {
     //MENU RESPONSIVE SHOW
     $('.menu-button').on('click', function () {
         var menu = $('.nav').slideToggle(400);
-        $(this).toggleClass('active');
+        //$(this).toggleClass('active');
 
         $(window).resize(function(){
             var w = $(window).width();
