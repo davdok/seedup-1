@@ -44,7 +44,9 @@ h3 {
     font-style: normal
 }
 .img-responsive {
-    opacity: .45;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     transition-duration: .5s
 }
 .team {
