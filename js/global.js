@@ -66,7 +66,6 @@ $(function() {
                 if($(element).offset().top<=(winScroll + 2) && ($(element).offset().top+$(element).height()) > (winScroll) ){
                     $('.scroll-to-link').parent().removeClass('active');
                     $('.scroll-to-link').eq(index).parent().addClass('active');
-                    if(window.location.hash!=$('.scroll-to-link').eq(index).attr('href')) window.location.hash = $('.scroll-to-link').eq(index).attr('href');
                 }
             });
         }
@@ -577,7 +576,7 @@ $(function() {
             type: 'inline',
             modal: false,
             closeOnContentClick:true,
-            
+
 
         });
     }
