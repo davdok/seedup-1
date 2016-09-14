@@ -2100,7 +2100,7 @@ img.footer-logo {
     text-align:center;
 }
 .cardProject:hover h1 {
-   
+
 }
 .cardProject h2{
     padding: 10px;
@@ -2118,7 +2118,7 @@ img.footer-logo {
     color: white;
     background:#fff;
     color:#333;
-    
+
 }
 .ag-nav li a {
     color: white;
@@ -2529,9 +2529,11 @@ video.bgvid {
     color: #000
 }
 .process img {
-    display: inline-block;
+    display: block;
     margin: auto;
-    opacity: .45
+    opacity: .45;
+    width: 55px;
+    height: 55px;
 }
 .active-process img,
 .process:hover img,
@@ -2543,14 +2545,18 @@ video.bgvid {
     border: 2px solid #eeeef0;
     width: 50px;
     height: 50px;
-    margin: 50px auto auto;
+    margin: 25px auto;
     font-size: 18px;
     color: #acafba
 }
 .number p {
     color: #acafba;
     margin-top: 7px;
-    font-family: Jaapokki
+    font-family: Jaapokki;
+    text-align: center;
+}
+.process h2 {
+    text-align: center;
 }
 .active-process p,
 .process:hover p {
@@ -2604,7 +2610,7 @@ video.bgvid {
 }
 .tag,
 .tag+p {
-    color: #c6c5cb!important
+    color: #454545!important
 }
 .lates-work .swiper-active-switch {
     background: #37383d!important
