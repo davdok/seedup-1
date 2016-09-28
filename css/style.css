@@ -113,8 +113,8 @@ section {
 .arrows {
     height: 72px;
     position: absolute;
-    left: 50%;
-    margin-left: -30px;
+    left: 94vh;
+    margin-left: -60px;
     bottom: 20px
 }
 #media-container,
@@ -2019,24 +2019,26 @@ img.footer-logo {
 
 
 .visitButton-active {
-    margin-top: -9px;
-    width: 43.5% !important;
+    margin-top: -10px;
+    /*width: 43.5% !important;*/
 }
 
-.ag-nav-active li a {
-    color: #333
+.ag-nav-active li a
+{
+    color: #333;
+    padding: 11px;
+    border: 2px solid rgba(255, 255, 255, 0.00);
 }
-.ag-nav-active li a {
+.ag-nav-active li a
+{
     color: #35373e;
-    /* border-color: #35373e */
 }
 
-.ag-nav-active li a:hover {
-    color: #fff;
-    border-color: #35373e;
-
-    background-color:#333;
+.ag-nav-active li a:hover
+{
+    border: 2px solid rgba(0, 0, 0, 0.50);
 }
+
 @media screen and (max-width: 992px) {
     .ag-nav-active li a {
         border-top: 1px solid #acafba
@@ -2114,17 +2116,18 @@ img.footer-logo {
     display: block;
 }
 
-.ag-nav li a:hover {
-    color: white;
-    background:#fff;
-    color:#333;
+.ag-nav li a:hover
+{
+    border: 2px solid rgba(255, 255, 255, 0.50);
+}
 
-}
-.ag-nav li a {
+.ag-nav li a
+{
     color: white;
-    /* border-color: #fff; */
     padding: 11px;
+    border: 2px solid rgba(255, 255, 255, 0.00);
 }
+
 @media screen and (max-width: 992px) {
     .ag-nav li a {
         color: #333;
@@ -2147,9 +2150,16 @@ a.anchor {
     visibility: hidden;
 }
 
+.visitButton
+{
+    position: relative;
+    left: -50px;
+}
+
 @media screen and (min-width: 992px) {
     .visitButton{
         width: 41%;
+        margin-top: -10px;
         margin-left: 0 auto;
         margin-right: 0 auto;
     }
@@ -2528,17 +2538,19 @@ video.bgvid {
 .process:hover h6 {
     color: #000
 }
-.process img {
+/*.process img {
     display: block;
     margin: auto;
     opacity: .45;
     width: 55px;
     height: 55px;
-}
+}*/
+
+
 .active-process img,
 .process:hover img,
 .team-member p {
-    opacity: 1
+    background: url('img/agency/team_b.png');
 }
 .number {
     border-radius: 50%;
@@ -2569,6 +2581,7 @@ video.bgvid {
     text-align: left;
     color: #909090;
     margin-top: 44px;
+    text-align: justify;
 }
 .use {
     font-size: 18px;
@@ -2705,6 +2718,7 @@ video.bgvid {
     padding: 0;
     width: 100%;
     height: auto
+    background-color: rgba(0, 0, 0, 0.50);
 }
 .social-network,
 .view {
@@ -2855,8 +2869,8 @@ video.bgvid {
     display: inline-block
 }
 .arrows {
-    width: 130px;
-    margin: auto
+    width: 60px;
+    margin: auto;
 }
 .arrow-left {
     margin-right: 90px
@@ -3676,25 +3690,21 @@ video.bgvid {
 
     .play_hacker_house
     {
-
-    display: block;
-            width: 41px;
-    margin-right: 10px;
+        display: block;
+        width: 41px;
+        /*margin-right: 10px;*/
     }
-
 
     .play_hacker_house2
     {
-
-
-          width: 41px;
-    margin-right: 55px;
+        width: 41px;
+        margin-right: 55px;
     }
+
     .red_hh
     {
-    color: #ec604c;
-    font-family: 'Nothing You Could Do', cursive;
-
+        color: #ec604c;
+        font-family: 'Nothing You Could Do', cursive;
     }
 
 
@@ -3778,12 +3788,6 @@ video.bgvid {
     margin-left: -34px;
     width: 50px;
     }
-
-    .p_seed
-    {
-    margin-top: 50px;
-    }
-
     .al_hh
     {
 
@@ -3817,7 +3821,7 @@ video.bgvid {
     a.more2_hh:hover
     {
 
-    color: #ec604c !important;
+    color: #fff !important;
     }
 
     .classWithPad { margin:10px; padding:10px; }
@@ -3892,8 +3896,8 @@ video.bgvid {
     padding-top: 15px;
 }
 #quote-carousel .carousel-indicators li {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
     border: 4px solid #CCC;
     border-radius: 50px;
@@ -3945,4 +3949,120 @@ overflow: scroll;
 .dhh::-webkit-scrollbar-thumb {
   background-color: #333;
   outline: 1px solid #333;
+}
+
+.stripe
+{
+    width: 100%; 
+    height: 150px;
+    text-align: center;
+    background: rgb(55, 55, 60);
+}
+
+.read
+{
+    width: 450px;
+    margin: 50px 15px 0 15px;
+}
+
+.read img
+{
+    width: 450px;
+    border: 3px solid #ec604c;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.20);
+}
+
+.p_seed
+{
+    margin: 0;
+    margin-top: -3rpx;
+    text-align: justify;
+    width: 580px;
+}
+
+.read h2
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.country-name
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.stripe_b
+{
+    height: 230px;
+    line-height: 20px;
+    padding-top: 70px;
+    text-align: center;
+    font-style: italic;
+    color: white;
+    font-size: 18px;
+    /*font-weight: bold;*/
+    font-family: 'Maven Pro';
+    background: rgb(245, 90, 65);
+    background: linear-gradient(#ec604c, #d5412c);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.20);
+    /*display: none;*/
+}
+
+.kote
+{
+    font-size: 26px;
+    font-family: "Time New Roman";
+    position: relative;
+    top: 4px;
+}
+
+.kote2
+{
+    font-weight: bold;
+    font-style: normal;
+    color: rgb(255, 160, 145);
+}
+
+.kote_f
+{
+    font-style: normal;
+}
+
+.process_icon
+{
+    height: 56px;
+    width: 56px;
+    display: block;
+    position: relative;
+    /*left: 110px;*/
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.process_icon.a {background: url('../img/agency/team.png');}
+.process_icon.b {background: url('../img/agency/house.png');}
+.process_icon.c {background: url('../img/agency/build.png');}
+.process_icon.d {background: url('../img/agency/idea.png');}
+
+.process_icon.a:hover {background: url('../img/agency/team_b.png');}
+.process_icon.b:hover {background: url('../img/agency/house_b.png');}
+.process_icon.c:hover {background: url('../img/agency/build_b.png');}
+.process_icon.d:hover {background: url('../img/agency/idea_b.png');}
+
+.modal-content
+{
+    width: 800px;
+    height: 470px;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+sup
+{
+    position: relative;
+    top: -3px;
 }
