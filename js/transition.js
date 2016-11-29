@@ -101,12 +101,11 @@ onlineTest.onclick = function () {
             setTimeout(function () {
                 c.style.opacity = 0;
                 c.style.zIndex = -1;
-            }, 300);
-        });
-        window.location = "http://recrutement.seed-up.org/";    
+            }, 300); 
+        });   
     }, 300);
     addClickEvent();
-    
+    window.location = "http://recrutement.seed-up.org/";
 };
 
 var addClickEvent = function addClickEvent() {
