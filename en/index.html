@@ -77,14 +77,25 @@
                     <p class="p3">Come and meet us!</p>
                     <p class="p4">Eureka Park, Sands Expo Center, Booth #50839</p>
                 </div>
-                <!-- <div class="twoModalBoxContainer"> -->
-                <div class="bigModalBox">
-                    <a href="http://www.get-moore.com">
-                            <div id="bigboxP" class="textContainer">
-                                <p class="p1"> Visit MOORE website and order one: </p>
-                                <p class="p2"> www.get-moore.com </p>
-                            </div>
-                    </a>
+
+                <div class="twoModalBoxContainer">
+                        <a href="http://www.get-moore.com">
+                                <div class="smallModalBox leftModalBox">
+                                        <div class="textContainer">
+                                                <p class="p1"> Visit MOORE website and order one: </p>
+                                                <p class="p2"> www.get-moore.com </p>
+                                        </div>
+                                </div>
+                        </a>
+                        <div id="stayHere" class="smallModalBox rightModalBox">
+                                <div class="textContainer">
+                                        <p class="p1"> Discover our hacker houses solutions for startups and companies: </p>
+                                        <p class="p2"> www.seed-up.io </p>
+                                </div>
+                        </div>
+                </div>
+
+                <div class="bigModalBox"> 
                     <div class="modalFooter">
                         <img src="resources/cross.png" class="crossClose" >
                     </div>
@@ -93,6 +104,9 @@
         </div>
 
         <script>
+        $('#stayHere').click(function () {
+            $('#modal').hide();
+        })
         $('.logoClose').click(function () {
             $('#modal').hide();
         })
