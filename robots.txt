@@ -1,0 +1,14 @@
+User-agent : *
+Allow: /index.html
+Allow: /joinus.html
+Allow: /projects.html
+Disallow: /README.md
+Disallow: /deploy.json
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /js/
+Disallow: /mailing/
+Disallow: /video/
+Sitemap: http://www.seed-up.io/sitemap.xml
+
